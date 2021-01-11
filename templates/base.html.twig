@@ -107,7 +107,7 @@
               <li class="last"><a href="#"><i class="fa fa-linkedin"></i></a></li>
               {% if app.user %}
               <li><a href="{{ path('app_logout') }}"><i class="fa fa-user"></i> Logout</a></li>
-              <li class="livechat"><a href="conversations"><i class="fa fa-comments"></i> Messenger</a></li>
+              <li class="livechat"><a href="{{ path('messagerie') }}" target = "_blank" ><i class="fa fa-comments"></i> Messenger</a></li>
               {% else %}
                 <li><a href="{{ path('app_login') }}"><i class="fa fa-user"></i> Login</a></li>
               {% endif %}

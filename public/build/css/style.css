@@ -42,6 +42,7 @@
 .site_wrapper {
 	width: 100%;
 	margin: 0 auto 0 auto;
+	
 }
 .container_full {
 	width: 100%;
@@ -54,6 +55,7 @@
 .container {
 	width: 900px;
 	margin: auto auto auto auto;
+	
 }
 .content_fullwidth {
 	float: left;
@@ -795,6 +797,34 @@ ul.social_icons.four li a:hover{
     z-index: 1;
 	text-transform: none;
 }
+
+.title4 {
+    color: rgb(190, 5, 107);
+    font-size: 30px;
+    font-weight: bold;
+    position: relative;
+    text-align: center;
+    z-index: 1;
+	text-transform: none;
+}
+.title5 {
+    color: rgb(29, 90, 182);
+    font-size: 30px;
+    font-weight: bold;
+    position: relative;
+    text-align: left;
+    z-index: 1;
+	text-transform: none;
+}
+.title6 {
+    color:  rgb(29, 90, 182);
+    font-size: 20px;
+    font-weight: bold;
+    position: relative;
+    text-align: left;
+    z-index: 1;
+	text-transform: none;
+}
 .title4 h2 em {
     color: #989898;
     display: block;
@@ -977,7 +1007,8 @@ ul.social_icons.four li a:hover{
 	width: 100%;
 	padding:0px 0px;
 	position: relative;
-	margin-top:80px;
+	margin-top:10px;
+	background-color: #d5d5d5;
 }
 .common_section.two{
 	margin-top:50px;
