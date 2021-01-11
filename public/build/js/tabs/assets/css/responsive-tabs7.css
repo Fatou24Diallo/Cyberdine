@@ -1,0 +1,206 @@
+.tabs7 {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+	border: 0px solid #eaeaea;
+	border-bottom: none;
+	height: 54px;
+	width: 99%;
+	background-color: #fff;
+	position: relative;
+	z-index: 4;
+}
+.tabs7.one {
+	width:63.500%;
+	margin:auto;
+}
+.tabs7 li {
+	margin: 0;
+	text-align: left;
+}
+.tabs7 li a {
+	float: left;
+	color: #222222;
+	height: 55px;
+	padding: 0px 25px;
+	font-weight: normal;
+	text-decoration: none;
+	line-height: 50px;
+	font-size: 16px;
+	background-color: #eeeeee;
+	border-right: 1px solid #fff;
+}
+.tabs7.tab3 li a {
+	float: left;
+	color: #222222;
+	height: 54px;
+	padding: 0px 44px;
+	font-weight: normal;
+	text-decoration: none;
+	line-height: 50px;
+	font-size: 16px;
+	background-color: #eeeeee;
+	border-right: 1px solid #fff;
+}
+.tabs7.tab3 li.midtab a {
+	padding: 0px 47px;
+}
+.tabs7 li a:hover {
+	color: #119ee7;
+}
+.tabs7 li.active a {
+	color: #fff;
+	background:#119ee7;
+}
+.tabs7.host li.active a {
+	color: #fbd005;
+	border-top: 4px solid #fbd005;
+	border-bottom: 1px solid #fff;
+}
+.tabs7.host li a:hover {
+	color: #fbd005;
+}
+.tabs7.two li.active a {
+	color: #73b41f;
+	border-top: 4px solid #eaeaea;
+	border-bottom: 1px solid #fff;
+}
+.tabs7.two li a:hover {
+	color: #73b41f;
+}
+.tabs-content7 {
+	float: left;
+	width: 99%;
+	padding: 6% 4% 0% 4%;
+	text-align: left;
+	margin-bottom: 40px;
+	position: relative;
+	z-index: 3;
+}
+.tabs-content7.tab3 {
+	float: left;
+	width: 99%;
+	padding: 6% 0 0% 0;
+	text-align: left;
+	margin-bottom:0;
+	position: relative;
+	z-index: 3;
+}
+.tabs-content7 img.img_left2 {
+	width: auto;
+	margin-right: 25px;
+	margin-bottom: 20px;
+}
+.tabs-content7 .tabs-panel {
+	padding: 20px;
+}
+.tabs-content7 .tabs-panel7 .tab-title3 {
+	display: none;
+}
+
+.tabs7.two li a {
+	padding: 0px 20px;
+}
+
+/*	#Themes
+//	================================================== */
+
+#example-7 .tabs7 li {
+width: 100px;
+border: 1px solid #DDD;
+border-right: 0;
+background: #EEE;
+cursor: pointer;
+position: relative;
+z-index: 999;
+}
+#example-7 .tabs7 li:last-child {
+border-right: 1px solid #DDD;
+}
+#example-7 .tabs7 li.active {
+border-bottom: 1px solid #FFF;
+background: #FFF;
+}
+#example-7 .tabs-content7 {
+border: 1px solid #DDD;
+background: #FFF;
+position: relative;
+top: -1px;
+z-index: 99;
+}
+#example-7 .tabs-content7 .tab-title {
+color: #0b8593;
+}
+
+@media only screen and (min-width: 1000px) and (max-width: 1169px){
+
+.tabs7 li a {
+	padding: 0px 20px;
+}
+
+.tabs7.two li a {
+    padding: 0 11px;
+}
+
+.tabs7 li a {
+    font-size: 13px;
+}
+
+}
+
+@media only screen and (min-width: 768px) and (max-width: 999px){
+
+.tabs7 li a {
+	padding: 0px 9px;
+}
+
+.tabs7.two li a {
+	padding: 0px 5px;
+}
+
+.tabs7 li a {
+    font-size: 11px;
+}
+
+}
+
+@media only screen and (min-width: 480px) and (max-width: 767px){
+.tabs7 li a {
+	padding: 0px 7px;
+}
+
+}
+
+@media only screen and (max-width: 479px){
+.tabs7 li a {
+	padding: 0px 5px;
+}
+
+.tabs7.two li a {
+	padding: 0px 9px;
+}
+
+.tabs-content7 img.img_left2 {
+    margin-bottom: 20px;
+    margin-right: 0px;
+    width: 90%;
+}
+.tabs-content7 {
+    width: 90%;
+	margin:0 5%;
+}
+
+.section_holder13 {
+    padding: 0;
+}
+
+.tabs7 li a {
+    margin: 0 5%;
+    width: 90%;
+}
+
+.tabs7 {
+    width: 99%;
+}
+
+}

@@ -1,0 +1,58 @@
+{% extends 'base.html.twig' %}
+
+
+{% block body1 %}
+<section class="common_section ">
+    <div class="container">	
+      <div class="login_form">		
+			<form class="sky-form" id="sky-form"  method="post">
+				{% if error %}
+                    <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+                {% endif %}
+                <br><br><h1 class="h3 mb-3 font-weight-normal">Please sign in</h1
+				<fieldset>					
+					<section>
+						<div class="row">
+							<label class="label col col-4" for="inputEmail">E-mail</label>
+							<div class="col col-8">
+								<label class="input">
+									<i class="icon-append fa fa-user"></i>
+									<input type="email" name="email" id="inputEmail" class="form-control" required autofocus>
+								</label><br>
+							</div>
+						</div>
+					</section>
+					
+					<section>
+						<div class="row">
+							<br><label class="label col col-4">Password</label>
+							<div class="col col-8">
+								<label class="input">
+									<i class="icon-append fa fa-lock"></i>
+									<input type="password" name="password" id="inputPassword" class="form-control" required>
+								</label>
+							</div>
+						</div>
+					</section>
+					
+					<section>
+						<div class="row">
+							<div class="col col-4"></div>
+							<div class="col col-8">
+								<label class="checkbox"><input type="checkbox" checked="" name="remember"><i></i>Keep me logged in</label><br>
+							</div>
+						</div>
+
+					</section>
+                    <input type="hidden" name="_csrf_token"
+                    value="{{ csrf_token('authenticate') }}">
+                    <button class="btn btn-lg btn-primary" type="submit">
+                        Sign in
+                    </button><br><br>
+
+				</fieldset>
+            </form>			
+		</div>
+    </div>
+</section>
+{% endblock %}

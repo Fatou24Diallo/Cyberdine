@@ -1,0 +1,97 @@
+/*	Responsive Tabs v1.0, Copyright 2014, Joe Mottershaw, https://github.com/joemottershaw/
+//	======================================================================================= */
+
+/*	Table of Contents
+//	==================================================
+//		#Reset
+//		#Themes
+
+
+/*	#Reset
+//	================================================== */
+
+.tabs {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+ul.tabs {
+	float: left;
+	width: 17%;
+}
+.tabs li {
+	margin: 0 0 5px 0;
+	text-align: left;
+}
+.tabs li a {
+	color: #767575;
+	display: block;
+	padding: 34px 0px 34px 20px;
+	text-decoration: none;
+	font-size: 16px;
+	background-color:#eeeeee
+}
+.tabs li.active a {
+	color: #fff;
+	background-color: #119ee7;
+}
+.tabs-content {
+	float: left;
+	width: 82%;
+	padding: 2% 0% 4% 4%;
+	text-align: left;
+	border:solid 0px #eeeeee;
+}
+/*.tabs-content img {
+	width: 100%;
+}*/
+.tabs-content img.img_left2 {
+	width: auto;
+}
+.tabs-content .tabs-panel {
+	/*padding: 20px;*/
+}
+.tabs-content .tabs-panel h3{
+	font-size:22px;
+	text-transform:none;
+	font-weight:normal;
+}
+.tabs-content .tabs-panel p{
+	margin-bottom:20px;
+}
+.tabs-content .tabs-panel .tab-title {
+	display: none;
+}
+
+@media only screen and (min-width: 480px) and (max-width: 767px){
+ul.tabs {
+	width: 32%;
+}
+.tabs-content {
+	width: 68%;
+	padding:5% 4% 8% 4%;
+}
+
+.tabs-content img {
+	width: 90%;
+}
+
+}
+
+
+@media only screen and (max-width: 479px){
+ul.tabs {
+	width: 100%;
+}
+.tabs-content {
+    padding:8% 6% 6% 6%;
+    width: 100%;
+	margin-top:-4px;
+}
+
+.tabs-content img {
+	width: 90%;
+	float:left;
+}
+
+}

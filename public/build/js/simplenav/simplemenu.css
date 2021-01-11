@@ -1,0 +1,354 @@
+.top-animate {
+	background: #119ee7 !important;
+	top: 13px !important;
+	-webkit-transform: rotate(45deg);
+	/* Chrome, Safari, Opera */
+  transform: rotate(45deg);
+}
+.mid-animate {
+	opacity: 0;
+}
+.bottom-animate {
+	background: #119ee7 !important;
+	top: 13px !important;
+	-webkit-transform: rotate(-225deg);
+	/* Chrome, Safari, Opera */
+  transform: rotate(-225deg);
+}
+.top-menu {
+	top:4px;
+	width:30px;
+	height:4px;
+	border-radius: 10px;
+	background-color: #F9A530;
+}
+.mid-menu {
+	top: 13px;
+	width:30px;
+	height:4px;
+	border-radius: 10px;
+	background-color: #F9A530;
+}
+.bottom-menu {
+	top: 22px;
+	width:30px;
+	height:4px;
+	border-radius: 10px;
+	background-color: #F9A530;
+}
+.menui {
+	background: #119ee7;
+	transition: 0.6s ease;
+	transition-timing-function: cubic-bezier(.75, 0, .29, 1.01);
+	margin-top: 10px;
+	position: absolute;
+}
+.simplenavicon {
+	display: block;
+	height: 42px;
+	left: 1300px;
+	margin: 0;
+	padding: 9px;
+	position: fixed;
+	top: 32px;
+	width: 42px;
+	z-index: 999
+}
+.simplenavicon2 {
+	display: block;
+	height: 40px;
+	left: 1220px;
+	margin: 0;
+	padding: 9px;
+	position: fixed;
+	top: 35px;
+	width: 40px;
+	z-index: 999
+}
+.mobilenav {
+	position: fixed;
+	z-index: 9999;
+	display: none;
+	width: 20%;
+	float:right;
+	left: 1000px;
+	top: 72px;
+	padding:20px 20px 0px 20px;
+	background:#fff;
+	border:1px solid #e4e4e4;
+	opacity: 1;
+}
+/*type two styles*/
+.mobilenav.two {
+	position: fixed;
+	z-index: 9999;
+	display: none;
+	width: 100%;
+	height:100%;
+	float:left;
+	left: 0;
+	top: 0;
+	padding:60px;
+	background: url(../../images/transparent_bg4.png) 0 0 repeat;
+	border:none;
+}
+.mobilenav.two li a {
+	color: #fff;
+	font-size:28px;
+	text-transform:uppercase;
+	text-decoration: none;
+	font-weight: normal;
+}
+.mobilenav.two li {
+	border-bottom:none;
+	padding: 20px 10px;
+}
+/*end type two styles*/
+
+
+
+
+.mobilenav li {
+	border-bottom:1px solid #e4e4e4;
+	width:auto;
+	list-style-type: none;
+	text-align: left;
+	padding: 10px;
+}
+.mobilenav li.last {
+	border-bottom:none;
+}
+.mobilenav li a {
+	color: #595959;
+	font-size:15px;
+	text-decoration: none;
+	font-weight: normal;
+}
+.mobilenav li a:hover {
+	color: #119ee7;
+	text-decoration: none;
+	font-weight: normal;
+}
+.menu li:hover {
+	color: #119ee7;
+}
+/*.menu a, .menu a:visited {
+	color:#333;
+	text-decoration:none;
+	display:block;
+	width:94%;
+	padding:5px 3%;
+	}*/
+
+.menu li a:hover {
+	color: #119ee7;
+}
+.menu li a.current, .menu li a.current i {
+	color: #119ee7;
+}
+ @media only screen and (max-width:1500px) {
+}
+ @media only screen and (max-width:1280px) {
+.simplenavicon {
+	left: 1150px;
+}
+.mobilenav {
+	left: 835px;
+}
+.simplenavicon2 {
+	left: 1150px;
+}
+}
+ @media only screen and (max-width:1199px) {
+.simplenavicon {
+	left: 1100px;
+}
+.mobilenav {
+	left: 800px;
+}
+.simplenavicon2 {
+	left: 1100px;
+}
+}
+ @media only screen and (max-width:1112px) {
+.simplenavicon {
+	left: 1000px;
+}
+.mobilenav {
+	left: 720px;
+	padding: 40px;
+}
+.simplenavicon2 {
+	left: 1000px;
+}
+}
+ @media only screen and (max-width:1080px) {
+.simplenavicon {
+	left: 940px;
+}
+.mobilenav {
+	left: 675px;
+	padding: 40px;
+}
+.simplenavicon2 {
+	left: 940px;
+}
+}
+ @media only screen and (max-width:1024px) {
+.simplenavicon {
+	left: 940px;
+}
+.mobilenav {
+	left: 675px;
+	padding: 20px;
+	width:30%;
+}
+.simplenavicon2 {
+	left: 940px;
+}
+}
+ @media only screen and (max-width:991px) {
+.simplenavicon {
+	left: 885px;
+}
+.mobilenav {
+	left: 640px;
+	padding: 40px;
+}
+.mobilenav li a {
+	font-size: 14px;
+}
+.mobilenav li a {
+	font-size: 14px;
+}
+.simplenavicon2 {
+	left: 885px;
+}
+}
+ @media only screen and (max-width:800px) {
+.simplenavicon {
+	left: 700px;
+}
+.simplenavicon2 {
+	left: 700px;
+}
+.mobilenav {
+	left: 366px;
+	padding: 40px;
+	width: 42%;
+}
+.mobilenav li a {
+	font-size: 14px;
+}
+.mobilenav li a {
+	font-size: 14px;
+}
+}
+ @media only screen and (max-width:768px) {
+.simplenavicon {
+	left: 663px;
+}
+.mobilenav {
+	left: 345px;
+	padding: 20px;
+	width: 42%;
+}
+.mobilenav li a {
+	font-size: 14px;
+}
+.mobilenav li a {
+	font-size: 14px;
+}
+.simplenavicon2 {
+	left: 663px;
+}
+}
+ @media only screen and (max-width:767px) {
+}
+ @media only screen and (max-width:640px) {
+.simplenavicon {
+	left: 550px;
+}
+.mobilenav {
+	left: 286px;
+	padding: 20px;
+	width: 42%;
+}
+.mobilenav li a {
+	font-size: 14px;
+}
+.mobilenav li a {
+	font-size: 14px;
+}
+.simplenavicon2 {
+	left: 550px;
+}
+}
+ @media only screen and (max-width:480px) {
+.simplenavicon {
+	top: 24px;
+	left: 400px;
+}
+.mobilenav {
+	left: 137px;
+	padding: 20px;
+	width: 56%;
+	top:40px;
+}
+.mobilenav li a {
+	font-size: 14px;
+}
+.mobilenav li a {
+	font-size: 14px;
+}
+.simplenavicon2 {
+	top: 0px;
+	left: 400px;
+}
+}
+ @media only screen and (max-width:360px) {
+.simplenavicon {
+	left: 300px;
+}
+.mobilenav {
+	left: 84px;
+	padding: 20px;
+	width: 70%;
+}
+.mobilenav li a {
+	font-size: 14px;
+}
+.mobilenav li a {
+	font-size: 14px;
+}
+.mobilenav.two li a {
+	font-size: 17px;
+}
+.mobilenav.two li {
+	padding: 16px 10px;
+}
+.simplenavicon2 {
+	left: 300px;
+}
+}
+ @media only screen and (max-width:320px) {
+.simplenavicon {
+	top: 0;
+	left: 265px;
+}
+.simplenavicon2 {
+	top: 0;
+	left: 265px;
+}
+.mobilenav {
+	left: 75px;
+	padding: 20px;
+	width: 70%;
+}
+.mobilenav li a {
+	font-size: 14px;
+}
+.mobilenav li a {
+	font-size: 14px;
+}
+}

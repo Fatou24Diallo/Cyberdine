@@ -1,0 +1,330 @@
+<!doctype html>
+<!--[if lt IE 7 ]> <html lang="en" class="no-js ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="en" class="no-js ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="en" class="no-js ie8"> <![endif]-->
+<!--[if IE 9 ]>    <html lang="en" class="no-js ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!-->
+<html lang="en" class="no-js">
+<!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, maximum-scale=1, initial-scale=1, user-scalable=0">
+<meta name="keywords" content="">
+<meta name="description" content="">
+<title>{% block title %} Cyberdine {% endblock %}</title>
+
+<!-- Favicon -->
+<link rel="shortcut icon" href="build/images/faviconC.ico">
+
+<!-- Google fonts - witch you want to use - (rest you can just remove) -->
+<link href='http://fonts.googleapis.com/css?family=Raleway:400,500,600,700,800,900,300,200,100' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
+
+<!--[if lt IE 9]>
+<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+<!--  CSS STYLES  -->
+<link rel="stylesheet" href="build/css/reset.css" type="text/css" />
+<link rel="stylesheet" href="build/css/style.css" type="text/css" />
+<link rel="stylesheet" href="build/css/font-awesome/css/font-awesome.min.css">
+
+<!-- responsive devices styles -->
+<link rel="stylesheet" media="screen" href="build/css/responsive-leyouts.css" type="text/css" />
+
+<!-- mega menu -->
+<link href="build/js/mainmenu/sticky.css" rel="stylesheet">
+<link href="build/js/mainmenu/bootstrap.min.css" rel="stylesheet">
+<link href="build/js/mainmenu/demo.css" rel="stylesheet">
+<link href="build/js/mainmenu/menu.css" rel="stylesheet">
+
+<!-- revolution slider -->
+<link rel="stylesheet" type="text/css" href="build/js/revolutionslider/css/style.css" media="screen" />
+
+<!-- SLIDER REVOLUTION 4.x CSS SETTINGS -->
+<link rel="stylesheet" type="text/css" href="build/js/revolutionslider/css/extralayers.css" media="screen" />
+<link rel="stylesheet" type="text/css" href="build/js/revolutionslider/rs-plugin/css/settings.css" media="screen" />
+
+<!-- animations -->
+<link href="build/js/animations/css/animations.min.css" rel="stylesheet" type="text/css" media="all" />
+
+<!-- tabs -->
+<link rel="stylesheet" type="text/css" href="build/js/tabs/assets/css/responsive-tabs.css">
+<link rel="stylesheet" type="text/css" href="build/js/tabs/assets/css/responsive-tabs7.css">
+
+<!-- owl carousel assets -->
+<link href="build/js/owl-carousel/owl.carousel.css" rel="stylesheet">
+<link href="build/js/owl-carousel/owl.theme.css" rel="stylesheet">
+    
+<!-- accordion -->
+<link rel="stylesheet" href="build/js/accordion/smk-accordion.css" />
+
+<!-- Remove the below comments to use your color option -->
+<!--<link rel="stylesheet" href="css/colors/red.css" />-->
+<!--<link rel="stylesheet" href="css/colors/orange.css" />-->
+<!--<link rel="stylesheet" href="css/colors/olive.css" />-->
+<!--<link rel="stylesheet" href="css/colors/green.css" />-->
+<!--<link rel="stylesheet" href="css/colors/pink.css" />-->
+<!--<link rel="stylesheet" href="css/colors/violet.css" />-->
+<!--<link rel="stylesheet" href="css/colors/sea.css" />-->
+<!--<link rel="stylesheet" href="css/colors/lightblue.css" />-->
+<!--<link rel="stylesheet" href="css/colors/lightgreen.css" />-->
+
+<!-- style switcher -->
+<link rel = "stylesheet" media = "screen" href = "build/js/style-switcher/color-switcher.css" />
+<!-- style switcher colors -->
+<link rel="alternate stylesheet" type="text/css" href="build/css/colors/red.css" title="red" />
+<link rel="alternate stylesheet" type="text/css" href="build/css/colors/orange.css" title="orange" />
+<link rel="alternate stylesheet" type="text/css" href="build/css/colors/olive.css" title="olive" />
+<link rel="alternate stylesheet" type="text/css" href="build/css/colors/green.css" title="green" />
+<link rel="alternate stylesheet" type="text/css" href="build/css/colors/pink.css" title="pink" />
+<link rel="alternate stylesheet" type="text/css" href="build/css/colors/violet.css" title="violet" />
+<link rel="alternate stylesheet" type="text/css" href="build/css/colors/sea.css" title="sea" />
+<link rel="alternate stylesheet" type="text/css" href="build/css/colors/lightblue.css" title="lightblue" />
+<link rel="alternate stylesheet" type="text/css" href="build/css/colors/lightgreen.css" title="lightgreen" />
+</head>
+
+<body>
+<div class="preloader">
+  <div class="status"></div>
+</div>
+<!-- end page loader -->
+<div class="site_wrapper"> 
+  
+  <!-- header -->
+  <header> 
+    <!-- Top header bar -->
+    <div id="topHeader">
+      <div class="wrapper">
+        <div class="top_nav">
+          <div class="container">
+            <ul class="left">
+              <li> <img src="images/flag-5.png" alt="" class="last"></li>
+              <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+              <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+              <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+              <li class="last"><a href="#"><i class="fa fa-linkedin"></i></a></li>
+            </ul>
+            <ul class="right-nav">
+            {% if app.user %}
+              <li><a href="{{ path('app_logout') }}"><i class="fa fa-user"></i> Logout</a></li>
+              <li class="livechat"><a href="conversations"><i class="fa fa-comments"></i> Messenger</a></li>
+            {% else %}
+              <li><a href="{{ path('app_login') }}"><i class="fa fa-user"></i> Login</a></li>
+            {% endif %}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end top navigation -->
+    
+    <div class="scrollto_sticky">
+      <div class="container"> 
+        
+        <!-- Logo -->
+        <div class="logo"><a href="#" id="logo"></a></div>
+        
+        <!-- Menu -->
+        <div class="menu_main">
+          <div class="navbar yamm navbar-default">
+            <div class="navbar-header">
+              <div class="navbar-toggle .navbar-collapse .pull-right " data-toggle="collapse" data-target="#navbar-collapse-1"  > <span>Menu</span>
+                <button type="button" > <i class="fa fa-bars"></i></button>
+              </div>
+            </div>
+            <div id="navbar-collapse-1" class="navbar-collapse collapse pull-right">
+              <nav>
+                <ul class="nav navbar-nav">
+                  <li class="dropdown yamm-fw"> <a class="dropdown-toggle" href="index.html">Home</a>
+                  </li>
+                  <li class="dropdown"> <a href="domain_search.html" class="dropdown-toggle"> Domains</a>
+                    <ul role="menu" class="dropdown-menu">
+                      <li><a href="domain_search.html">Domain Search</a></li>
+                      <li><a href="domain_transfer.html">Domain Transfer</a> </li>
+                    </ul>
+                  </li>
+                  </li>
+                  <li class="dropdown last"> <a class="dropdown-toggle" href="contact.html">Contact</a>
+                    <ul role="menu" class="dropdown-menu">
+                      <li> <a href="contact.html">Contact Variation 1</a> </li>
+                      <li> <a href="contact2.html">Contact Variation 2</a> </li>
+                      <li> <a href="contact3.html">Contact Variation 3</a> </li>
+                    </ul>
+                  </li>
+                  {% if app.user %}
+                    <li class="dropdown last"> <a class="dropdown-toggle" href="#">Profil</a>
+                        <ul role="menu" class="dropdown-menu two">
+                        <li> <a href="#">Parameters</a> </li>
+                        <li> <a href="{{ path('app_logout') }}">logout</a> </li>
+                        </ul>
+                    </li>
+                  {% endif %}
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+        <!-- end menu --> 
+      </div>
+    </div>
+  </header>
+  <div class="clearfix"></div>
+  <section class="header-section">
+    <div class="page_header two">
+    </div>
+  </section>
+  <!-- end page header -->
+<div class="clearfix"></div>
+  {% block body1 %}
+  {% endblock %}
+  <footer>
+    <div class="footer">
+      <div class="container">
+        <div class="one_fourth animate-in" data-anim-type="fade-in-right" data-anim-delay="100">
+          <h4 class="white">About Company</h4>
+          <div class="title_line"></div>
+          <p>Pellentesque mi purus, eleifend sed commodo vel, sagittis ac dui. Morbi at vestibulum dui.</p>
+          <div class="clearfix margin_top1"></div>
+          <ul class="faddress">
+            <li><i class="fa fa-map-marker fa-lg"></i>&nbsp; 15 Barnes Wallis Way, Buckshaw<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Village, Chorley, USA</li>
+            <li><i class="fa fa-phone"></i>&nbsp; +1 (012) 345 6789</li>
+            <li><a href="mailto:info@yourdomain.com"><i class="fa fa-envelope"></i>&nbsp; info@yourdomain.com</a></li>
+          </ul>
+        </div>
+        <!--end item-->
+        
+        
+        <div class="one_fourth animate-in clear" data-anim-type="fade-in-right" data-anim-delay="300">
+          <h4 class="white">Legal and Help</h4>
+          <div class="title_line"></div>
+          <ul class="listitem">
+            <li><i class="fa fa-angle-right"></i> Contact Us</li>
+            <li><i class="fa fa-angle-right"></i> My Account</li>
+            <li><i class="fa fa-angle-right"></i> Legal &amp; Privacy</li>
+            <li><i class="fa fa-angle-right"></i> Report Abuse</li>
+            <li><i class="fa fa-angle-right"></i> Terms of Service</li>
+            <li><i class="fa fa-angle-right"></i> Subpoenas</li>
+          </ul>
+        </div>
+        <!--end item-->
+        
+        <div class="one_fourth last animate-in" data-anim-type="fade-in-right" data-anim-delay="400">
+          <h4 class="white">Links</h4>
+          <div class="title_line"></div>
+          <div class="clearfix margin_top4"></div>
+          <ul class="social_icons animate-in" data-anim-type="fade-in-right" data-anim-delay="400">
+            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+            <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+            <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+            <li class="last"><a href="#"><i class="fa fa-flickr"></i></a></li>
+          </ul>
+        </div>
+        <!--end item--> 
+        
+      </div>
+    </div>
+    <!--end footer-->
+    
+    <div class="copyrights">
+      <div class="container">
+        <div class="one_half"><span>Copyright Cyberdine 2020 . All rights reserved.</span></div>
+      </div>
+    </div>
+    <!--end copyrights--> 
+  </footer>
+</div>
+<!--end sitewraper--> 
+
+
+
+<a href="#" class="scrollup"></a> 
+<!-- end scroll to top of the page--> 
+
+<!-- ######### JS FILES ######### --> 
+
+<!-- get jQuery from the google apis --> 
+<script type="text/javascript" src="build/js/universal/jquery.js"></script> 
+
+<!-- page loder --> 
+<script>
+// makes sure the whole site is loaded
+
+(function($) {
+  "use strict";
+jQuery(window).load(function() {
+	"use strict";
+        // will first fade out the loading animation
+	jQuery(".status").fadeOut();
+        // will fade out the whole DIV that covers the website.
+	jQuery(".preloader").delay(1000).fadeOut("slow");
+})
+
+})(jQuery);
+</script> 
+
+<!-- style switcher --> 
+<script src="build/js/style-switcher/jquery-1.js"></script> 
+<script src="build/js/style-switcher/styleselector.js"></script> 
+
+<!-- animations --> 
+<script src="build/js/animations/animations.min.js" type="text/javascript"></script> 
+<script src="build/js/animations/appear.min.js" type="text/javascript"></script> 
+
+<!-- scroll to fixied sticky --> 
+<script src="build/js/mainmenu/jquery-scrolltofixed.js" type="text/javascript"></script> 
+<script src="build/js/mainmenu/ScrollToFixed_custom.js" type="text/javascript"></script> 
+
+<!-- SLIDER REVOLUTION 4.x SCRIPTS  --> 
+<script type="text/javascript" src="build/js/revolutionslider/rs-plugin/js/jquery.themepunch.revolution.js"></script> 
+<script type="text/javascript" src="build/js/revolutionslider/rs-plugin/js/jquery.themepunch.tools.min.js"></script> 
+<script type="text/javascript" src="build/js/revolutionslider/rs-plugin/js/jquery.themepunch.revolution.min.js"></script> 
+<script type="text/javascript" src="build/js/revolutionslider/custom1.js"></script> 
+
+<!-- mega menu --> 
+<script src="build/js/mainmenu/bootstrap.min.js"></script> 
+<script src="build/js/mainmenu/customeUI.js"></script> 
+
+<!-- tabs --> 
+<script src="build/js/tabs/assets/js/responsive-tabs.min.js" type="text/javascript"></script> 
+
+<!-- Accordion --> 
+<script type="text/javascript" src="build/js/accordion/smk-accordion.js"></script> 
+<script type="text/javascript" src="build/js/accordion/custom.js"></script> 
+
+<!-- owl-carousel --> 
+<script src="build/js/owl-carousel/owl.carousel.js"></script> 
+<script>
+(function($) {
+  "use strict";
+    $(document).ready(function() {
+      $("#owl-demo").owlCarousel({
+
+      navigation : true,
+      slideSpeed : 300,
+      paginationSpeed : 400,
+      singleItem : true
+
+      // "singleItem:true" is a shortcut for:
+      // items : 1, 
+      // itemsDesktop : false,
+      // itemsDesktopSmall : false,
+      // itemsTablet: false,
+      // itemsMobile : false
+
+      });
+    });
+	})(jQuery);
+</script> 
+
+<!-- scroll up --> 
+<script src="build/js/scrolltotop/totop.js" type="text/javascript"></script>
+
+<!-- progress bar --> 
+<script src="build/js/progressbar/progress.js" type="text/javascript" charset="utf-8"></script>
+
+</body>
+</html>
