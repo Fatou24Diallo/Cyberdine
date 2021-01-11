@@ -12,7 +12,7 @@
 <meta name="viewport" content="width=device-width, maximum-scale=1, initial-scale=1, user-scalable=0">
 <meta name="keywords" content="">
 <meta name="description" content="">
-<title>{% block title %} Cyberdine {% endblock %}</title>
+<title>Cyberdine Applications</title>
 
 <!-- Favicon -->
 <link rel="shortcut icon" href="build/images/faviconC.ico">
@@ -56,9 +56,12 @@
 <!-- owl carousel assets -->
 <link href="build/js/owl-carousel/owl.carousel.css" rel="stylesheet">
 <link href="build/js/owl-carousel/owl.theme.css" rel="stylesheet">
-    
+
 <!-- accordion -->
 <link rel="stylesheet" href="build/js/accordion/smk-accordion.css" />
+
+<!-- progressbar -->
+<link rel="stylesheet" href="build/js/progressbar/ui.progress-bar.css">
 
 <!-- Remove the below comments to use your color option -->
 <!--<link rel="stylesheet" href="css/colors/red.css" />-->
@@ -100,143 +103,88 @@
         <div class="top_nav">
           <div class="container">
             <ul class="left">
-              <li> <img src="images/flag-5.png" alt="" class="last"></li>
+              <li><img src="images/flag-1.png" alt=""> <img src="images/flag-2.png" alt=""> <img src="images/flag-3.png" alt=""> <img src="images/flag-4.png" alt=""> <img src="images/flag-5.png" alt="" class="last"></li>
               <li><a href="#"><i class="fa fa-facebook"></i></a></li>
               <li><a href="#"><i class="fa fa-twitter"></i></a></li>
               <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
               <li class="last"><a href="#"><i class="fa fa-linkedin"></i></a></li>
-              {% if app.user %}
-              <li><a href="{{ path('app_logout') }}"><i class="fa fa-user"></i> Logout</a></li>
-              <li class="livechat"><a href="conversations"><i class="fa fa-comments"></i> Messenger</a></li>
-              {% else %}
-                <li><a href="{{ path('app_login') }}"><i class="fa fa-user"></i> Login</a></li>
-              {% endif %}
+            </ul>
           </div>
         </div>
       </div>
     </div>
     <!-- end top navigation -->
-    
     <div class="scrollto_sticky">
       <div class="container"> 
         
         <!-- Logo -->
         <div class="logo"><a href="#" id="logo"></a></div>
-        
-        <!-- Menu -->
-        <div class="menu_main">
-          <div class="navbar yamm navbar-default">
-            <div class="navbar-header">
-              <div class="navbar-toggle .navbar-collapse .pull-right " data-toggle="collapse" data-target="#navbar-collapse-1"  > <span>Menu</span>
-                <button type="button" > <i class="fa fa-bars"></i></button>
-              </div>
-            </div>
-            <div id="navbar-collapse-1" class="navbar-collapse collapse pull-right">
-              <nav>
-                <ul class="nav navbar-nav">
-                  <li class="dropdown yamm-fw"> <a class="dropdown-toggle" href="#">Home</a>
-                  </li>
-                  <li class="dropdown"> <a href="#" class="dropdown-toggle"> Domains</a>
-                    <ul role="menu" class="dropdown-menu">
-                      <li><a href="#">Domain Search</a></li>
-                      <li><a href"#">Domain Transfer</a> </li>
-                    </ul>
-                  </li>
-                  </li>
-                  <li class="dropdown last"> <a class="dropdown-toggle" href="#">Contact</a>
-                    <ul role="menu" class="dropdown-menu">
-                      <li> <a href="#">Contact Variation 1</a> </li>
-                      <li> <a href="#">Contact Variation 2</a> </li>
-                      <li> <a href="#">Contact Variation 3</a> </li>
-                    </ul>
-                  </li>
-                  {% if app.user %}
-                    <li class="dropdown last"> <a class="dropdown-toggle" href="#">Profil</a>
-                        <ul role="menu" class="dropdown-menu two">
-                        <li> <a href="#">Parameters</a> </li>
-                        <li> <a href="{{ path('app_logout') }}">logout</a> </li>
-                        </ul>
-                    </li>
-                  {% endif %}
-                </ul>
-              </nav>
-            </div>
-          </div>
-        </div>
         <!-- end menu --> 
       </div>
     </div>
   </header>
   <div class="clearfix"></div>
-  <section class="header-section">
-    <div class="page_header two">
+  <!-- end page header -->
+  <div class="clearfix"></div>
+  
+  <section class="common_section">
+    <div class="container">
+      <div class="left_sidebar">
+        <div class="categories_holder">
+          <h1 class="padd_bot2">Applications </h1>
+          <h5><ul class="list">
+            <h5><li class="first"><a href="#"><i class="fa fa-caret-right"></i> Messagerie</a></li>
+            <li><a href="#"><i class="fa fa-caret-right"></i> Guacamole</a></li>
+            <li><a href="{{ path('app_logout') }}"><i class="fa fa-caret-right"></i> Se Déconnecter</a></li>
+            <li></li>
+			<li></li>
+            <li></li>
+            <li class="last"></li>
+          </ul></h5>
+        </div>
+        <!--end categories-->
+        <div class="clearfix"></div>
+
+      </div>
+      <!--end left sidebar-->
+      
+    <div class="content_right">
+
+        <div><a href="#">
+        <img class="img-size1" alt="" src="http://placehold.it/830x378">
+        <div class="margin_top2"></div>
+        <h5><p> Messagerie </p></h5></a></div><br><br> <br>
+
+        <div><a href="#"> 
+        <img class="img-size1" alt="" src="http://placehold.it/830x378">
+        <div class="margin_top2"></div>
+        <h5><p>Guacamole </p></h5></a></div>
+
+    </div>
+    <!--end content right--> 
+      
     </div>
   </section>
-  <!-- end page header -->
+  <!-- end section 1 -->
+  <div class="clearfix"></div>
+
+
 <div class="clearfix"></div>
-  {% block body1 %}
-  {% endblock %}
-  <footer>
-    <div class="footer">
-      <div class="container">
-        <div class="one_fourth animate-in" data-anim-type="fade-in-right" data-anim-delay="100">
-          <h4 class="white">About Company</h4>
-          <div class="title_line"></div>
-          <p>Pellentesque mi purus, eleifend sed commodo vel, sagittis ac dui. Morbi at vestibulum dui.</p>
-          <div class="clearfix margin_top1"></div>
-          <ul class="faddress">
-            <li><i class="fa fa-map-marker fa-lg"></i>&nbsp; 15 Barnes Wallis Way, Buckshaw<br>
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Village, Chorley, USA</li>
-            <li><i class="fa fa-phone"></i>&nbsp; +1 (012) 345 6789</li>
-            <li><a href="mailto:info@yourdomain.com"><i class="fa fa-envelope"></i>&nbsp; info@yourdomain.com</a></li>
-          </ul>
+
+    <footer>
+        <div class="copyrights">
+            <div class="container">
+                <div class="one_half"><span>Copyright Cyberdine 2020 . All rights reserved.</span></div>
+            </div>
         </div>
-        <!--end item-->
-        
-        
-        <div class="one_fourth animate-in clear" data-anim-type="fade-in-right" data-anim-delay="300">
-          <h4 class="white">Legal and Help</h4>
-          <div class="title_line"></div>
-          <ul class="listitem">
-            <li><i class="fa fa-angle-right"></i> Contact Us</li>
-            <li> <a href="{{ path('app_login') }}" > <i class="fa fa-angle-right"></i> My Account</a></li>
-            <li><i class="fa fa-angle-right"></i> Legal &amp; Privacy</li>
-            <li><i class="fa fa-angle-right"></i> Report Abuse</li>
-            <li><i class="fa fa-angle-right"></i> Terms of Service</li>
-            <li><i class="fa fa-angle-right"></i> Subpoenas</li>
-          </ul>
-        </div>
-        <!--end item-->
-        
-        <div class="one_fourth last animate-in" data-anim-type="fade-in-right" data-anim-delay="400">
-          <h4 class="white">Links</h4>
-          <div class="title_line"></div>
-          <div class="clearfix margin_top4"></div>
-          <ul class="social_icons animate-in" data-anim-type="fade-in-right" data-anim-delay="400">
-            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-            <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-            <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-            <li class="last"><a href="#"><i class="fa fa-flickr"></i></a></li>
-          </ul>
-        </div>
-        <!--end item--> 
-        
-      </div>
-    </div>
-    <!--end footer-->
-    
-    <div class="copyrights">
-      <div class="container">
-        <div class="one_half"><span>Copyright Cyberdine 2020 . All rights reserved.</span></div>
-      </div>
-    </div>
-    <!--end copyrights--> 
-  </footer>
+        <!--end copyrights--> 
+    </footer>
 </div>
 <!--end sitewraper--> 
 
-
+<!-- style switcher --> 
+<script type="text/javascript" src="js/style-switcher/styleswitcher.js"></script>
+<!-- end style switcher --> 
 
 <a href="#" class="scrollup"></a> 
 <!-- end scroll to top of the page--> 
@@ -262,10 +210,10 @@ jQuery(window).load(function() {
 
 })(jQuery);
 </script> 
-
 <!-- style switcher --> 
+
 <script src="build/js/style-switcher/jquery-1.js"></script> 
-<script src="build/js/style-switcher/styleselector.js"></script> 
+<script src="js/style-switcher/styleselector.js"></script> 
 
 <!-- animations --> 
 <script src="build/js/animations/animations.min.js" type="text/javascript"></script> 
@@ -297,6 +245,7 @@ jQuery(window).load(function() {
 <script>
 (function($) {
   "use strict";
+  
     $(document).ready(function() {
       $("#owl-demo").owlCarousel({
 
