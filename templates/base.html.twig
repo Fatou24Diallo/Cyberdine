@@ -56,9 +56,19 @@
 <!-- owl carousel assets -->
 <link href="build/js/owl-carousel/owl.carousel.css" rel="stylesheet">
 <link href="build/js/owl-carousel/owl.theme.css" rel="stylesheet">
+<link href="build/js/owl-carousel/owl.transitions.css" rel="stylesheet">
     
 <!-- accordion -->
 <link rel="stylesheet" href="build/js/accordion/smk-accordion.css" />
+
+<!-- progressbar -->
+<link rel="stylesheet" href="build/js/progressbar/ui.progress-bar.css">
+
+<!-- forms -->
+<link rel="stylesheet" href="build/js/form/css/sky-forms.css" type="text/css" media="all">
+
+<!-- cubeportfolio -->
+<link rel="stylesheet" type="text/css" href="build/js/cubeportfolio/cubeportfolio.min.css">
 
 <!-- Remove the below comments to use your color option -->
 <!--<link rel="stylesheet" href="css/colors/red.css" />-->
@@ -143,12 +153,7 @@
                     </ul>
                   </li>
                   </li>
-                  <li class="dropdown last"> <a class="dropdown-toggle" href="#">Contact</a>
-                    <ul role="menu" class="dropdown-menu">
-                      <li> <a href="#">Contact Variation 1</a> </li>
-                      <li> <a href="#">Contact Variation 2</a> </li>
-                      <li> <a href="#">Contact Variation 3</a> </li>
-                    </ul>
+                  <li class="dropdown yamm-fw"> <a class="dropdown-toggle" href="{{ path('contact') }}">Contact</a>
                   </li>
                   {% if app.user %}
                     <li class="dropdown last"> <a class="dropdown-toggle" href="#">Profil</a>
@@ -293,7 +298,8 @@ jQuery(window).load(function() {
 <script type="text/javascript" src="build/js/accordion/custom.js"></script> 
 
 <!-- owl-carousel --> 
-<script src="build/js/owl-carousel/owl.carousel.js"></script> 
+<script src="build/js/owl-carousel/owl.carousel.js"></script>
+
 <script>
 (function($) {
   "use strict";
