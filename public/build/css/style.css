@@ -163,7 +163,7 @@
 	margin-top: 3px;
 	position: relative;
 	text-indent: -999em;
-	background: url(../images/Cyberdine_2.PNG) no-repeat left bottom;
+	background: url(../images/cyberdine-4.png) no-repeat left bottom;
 }
 /* Logo White */
 #logo-white {
@@ -799,7 +799,7 @@ ul.social_icons.four li a:hover{
 }
 
 .title4 {
-    color: rgb(190, 5, 107);
+    color: rgba(5, 37, 85, 0.856);
     font-size: 30px;
     font-weight: bold;
     position: relative;
@@ -808,7 +808,7 @@ ul.social_icons.four li a:hover{
 	text-transform: none;
 }
 .title5 {
-    color: rgb(29, 90, 182);
+    color: rgba(5, 37, 85, 0.856);
     font-size: 30px;
     font-weight: bold;
     position: relative;
@@ -1008,7 +1008,7 @@ ul.social_icons.four li a:hover{
 	padding:0px 0px;
 	position: relative;
 	margin-top:10px;
-	background-color: #d5d5d5;
+	background-color: #f8e8d1d2;
 }
 .common_section.two{
 	margin-top:50px;
@@ -2415,6 +2415,7 @@ ul.social_icons.four li a:hover{
 	padding:0px;
 	position: relative;
 	margin-top:100px;
+	background-color: #f8e8d1d2;
 }
 .section10 .one_fifth{
 	margin-right:0;
@@ -3767,7 +3768,8 @@ ul.social_icons.four li a:hover{
 	width: 100%;
 	padding:0;
 	position: relative;
-	margin-top:78px
+	margin-top:78px;
+	background-color: #f8e8d1d2;
 }
 .abt-col h2{
 	font-size:20px;
@@ -4035,6 +4037,7 @@ ul.social_icons.four li a:hover{
 	padding:0;
 	position: relative;
 	margin-top:60px;
+	background-color: #f8e8d1d2;
 }
 .section40 .img_holder {
 	position: relative;
