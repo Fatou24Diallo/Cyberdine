@@ -13,6 +13,18 @@ use Symfony\Component\Routing\Generator\UrlGeneratorInterface;
 
 class HomeController extends AbstractController
 {
+
+    /**
+     * @var UserRepository
+     */
+
+    private $repository;
+
+    public function __construct( UserRepository $repository){
+        $this->repository = $repository;
+
+    }
+
     /**
      * @Route("/", name="home")
      */
@@ -49,6 +61,7 @@ class HomeController extends AbstractController
 
         $em = $this->getDoctrine()->getManager();
         $user = $this->getUser();
+        $users = $this->repository->findAll();
         $userName = $user->getUsername();
         $userEmail = $user->getEmail();
 
@@ -56,6 +69,7 @@ class HomeController extends AbstractController
             'controller_name' => 'HomeController',
             'user_name' => $userName,
             'user_email' => $userEmail,
+            'users' => $users,
         ]);
     }
 

@@ -12,7 +12,7 @@
 <meta name="viewport" content="width=device-width, maximum-scale=1, initial-scale=1, user-scalable=0">
 <meta name="keywords" content="">
 <meta name="description" content="">
-<title>Cyberdine Applications</title>
+<title>Cyberdine Messagerie</title>
 
 <!-- Favicon -->
 <link rel="shortcut icon" href="build/images/faviconC.ico">
@@ -125,22 +125,62 @@
   <div class="clearfix"></div>
   <!-- end page header -->
   <div class="clearfix"></div>
-  
-  <section> <h2 class="title4"><p>Bienvenu  {{user_name}} sur l'application de Messagerie (en cours de construction)</p></h2></section>
+  <section> <h2 class="title4"><p>Messagerie</p></h2></section>
+
+
+  <div class="clearfix"></div>
+  <section class="common_section">
+    <div class="container">
+      <form method="post" action="">
+      <div class="left_sidebar">
+        <div class="categories_holder">
+          <h1 class="padd_bot2 title5">Choisir un destinataire </h1>
+          <h5><ul class="list">
+            <li class="first title6">
+              <select name="users">
+                {% for user in users %}
+                  <option value="user_name">{{user.username}}</option>
+                {% endfor %}
+              </select>
+            </li>
+            
+            <li class="last"></li>
+          </ul></h5>
+        </div>
+        <!--end categories-->
+        <div class="clearfix"></div>
+
+      </div>
+      <!--end left sidebar-->
+      
+    <div class="content_right">
+      <label for="message" class="title6">Message:</label><br><br>
+
+      <textarea id="message" name="message"
+                rows="5" cols="33">
+      </textarea>
+
+      <button class="btn btn-success">Envoyer</button>
+
+    </div></form>
+    <!--end content right--> 
+      
+    </div>
+  </section>
   <!-- end section 1 -->
   <div class="clearfix"></div>
 
 
 <div class="clearfix"></div>
 
-    <footer>
+    <!--<footer>
         <div class="copyrights">
             <div class="container">
                 <div class="one_half"><span>Copyright Cyberdine 2020 . All rights reserved.</span></div>
             </div>
         </div>
-        <!--end copyrights--> 
-    </footer>
+        end copyrights 
+    </footer>-->
 </div>
 <!--end sitewraper--> 
 
