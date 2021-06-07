@@ -15,10 +15,9 @@ class HomeController extends AbstractController
 {
 
     /**
-     * @var UserRepository
+     * @var ConversationRepository
      */
-
-    private $repository;
+    private $conversationRepository;
 
     public function __construct( UserRepository $repository){
         $this->repository = $repository;
@@ -53,25 +52,6 @@ class HomeController extends AbstractController
         ]);
     }
 
-    /**
-     * @Route("/messagerie", name="messagerie")
-     */
-    public function messagerie(Request $request): Response
-    {
-
-        $em = $this->getDoctrine()->getManager();
-        $user = $this->getUser();
-        $users = $this->repository->findAll();
-        $userName = $user->getUsername();
-        $userEmail = $user->getEmail();
-
-        return $this->render('home/messagerie.html.twig', [
-            'controller_name' => 'HomeController',
-            'user_name' => $userName,
-            'user_email' => $userEmail,
-            'users' => $users,
-        ]);
-    }
 
     /**
      * @Route("/contact", name="contact")
