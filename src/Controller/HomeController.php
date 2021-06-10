@@ -15,9 +15,9 @@ class HomeController extends AbstractController
 {
 
     /**
-     * @var ConversationRepository
+     * @var UserRepository
      */
-    private $conversationRepository;
+    private $repository;
 
     public function __construct( UserRepository $repository){
         $this->repository = $repository;
@@ -62,4 +62,5 @@ class HomeController extends AbstractController
             'controller_name' => 'HomeController',
         ]);
     }
+
 }

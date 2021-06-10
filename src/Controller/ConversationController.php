@@ -14,9 +14,6 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\WebLink\Link;
 
-/**
- * @Route("/conversations", name="conversations.")
- */
 class ConversationController extends AbstractController
 {
     /**
@@ -42,7 +39,7 @@ ConversationRepository $conversationRepository)
     }
 
     /**
-     * @Route("/{id}", name="newConversations")
+     * @Route("/conversations/{id}", name="newConversations", methods={"POST"})
      * @param Request $request
      * @return JsonResponse
      * @throws \Exception
@@ -104,17 +101,18 @@ ConversationRepository $conversationRepository)
 
 
     /**
-     * @Route("/", name="getConversations", methods={"GET"})
+     * @Route("/conversations", name="getConversations", methods={"GET"})
      * @param Request $request
-     * @return JsonResponse
      */
-    public function getConvs(Request $request) {
+    public function getConvs(Request $request): Response{
         $conversations = $this->conversationRepository->findConversationsByUser($this->getUser()->getId());
         
-        $hubUrl = $this->getParameter('mercure.default_hub');
-
-        $this->addLink($request, new Link('mercure', $hubUrl));
-        return $this->json($conversations);
+        $users = $this->userRepository->findAll();
+        return $this->render('home/messagerie.html.twig', [
+            'controller_name' => 'ConversationController',
+            'conversations' => $conversations,
+            'users' => $users,
+        ]);
     }
-
+    
 }

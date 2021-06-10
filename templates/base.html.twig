@@ -117,7 +117,7 @@
               <li class="last"><a href="#"><i class="fa fa-linkedin"></i></a></li>
               {% if app.user %}
               <li><a href="{{ path('app_logout') }}"><i class="fa fa-user"></i> Logout</a></li>
-              <li class="livechat"><a href="{{ path('messagerie') }}" target = "_blank" ><i class="fa fa-comments"></i> Messenger</a></li>
+              <li class="livechat"><a href="{{ path('getConversations') }}" target = "_blank" ><i class="fa fa-comments"></i> Messenger</a></li>
               {% else %}
                 <li><a href="{{ path('app_login') }}"><i class="fa fa-user"></i> Login</a></li>
               {% endif %}
@@ -156,7 +156,7 @@
                   <li class="dropdown yamm-fw"> <a class="dropdown-toggle" href="{{ path('contact') }}">Contact</a>
                   </li>
                   {% if app.user %}
-                    <li class="dropdown last"> <a class="dropdown-toggle" href="#">Profil</a>
+                    <li class="dropdown last"> <a class="dropdown-toggle" href="{{ path('useracccount') }}">Profil</a>
                         <ul role="menu" class="dropdown-menu two">
                         <li> <a href="#">Parameters</a> </li>
                         <li> <a href="{{ path('app_logout') }}">logout</a> </li>
