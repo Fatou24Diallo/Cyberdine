@@ -108,10 +108,15 @@ ConversationRepository $conversationRepository)
         $conversations = $this->conversationRepository->findConversationsByUser($this->getUser()->getId());
         
         $users = $this->userRepository->findAll();
+        $user = $this->getUser();
+        $userName = $user->getUsername();
+        $userEmail = $user->getEmail();
         return $this->render('home/messagerie.html.twig', [
             'controller_name' => 'ConversationController',
             'conversations' => $conversations,
             'users' => $users,
+            'user_name' => $userName,
+            'user_email' => $userEmail,
         ]);
     }
     

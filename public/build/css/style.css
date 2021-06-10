@@ -799,7 +799,7 @@ ul.social_icons.four li a:hover{
 }
 
 .title4 {
-    color: rgba(5, 37, 85, 0.856);
+    color: rgba(84, 85, 5, 0.856);
     font-size: 30px;
     font-weight: bold;
     position: relative;
@@ -826,7 +826,7 @@ ul.social_icons.four li a:hover{
 	text-transform: none;
 }
 .title4 h2 em {
-    color: #989898;
+    color: #f9faf3;
     display: block;
     font-style: normal;
     font-weight: normal;
@@ -1008,7 +1008,9 @@ ul.social_icons.four li a:hover{
 	padding:0px 0px;
 	position: relative;
 	margin-top:10px;
-	background-color: #f8e8d1d2;
+	background: #FEEBB0;
+	background: -webkit-linear-gradient(to right, #FEEBB0, #4B3C0E, #FEEBB0);
+	background: linear-gradient(to right, #4B3C0E, #FEEBB0, #4B3C0E);
 }
 .common_section.two{
 	margin-top:50px;
@@ -2415,7 +2417,9 @@ ul.social_icons.four li a:hover{
 	padding:0px;
 	position: relative;
 	margin-top:100px;
-	background-color: #f8e8d1d2;
+	background: #FEEBB0;
+	background: -webkit-linear-gradient(to right, #FEEBB0, #4B3C0E, #FEEBB0);
+	background: linear-gradient(to right, #4B3C0E, #FEEBB0, #4B3C0E);
 }
 .section10 .one_fifth{
 	margin-right:0;
@@ -3769,7 +3773,9 @@ ul.social_icons.four li a:hover{
 	padding:0;
 	position: relative;
 	margin-top:78px;
-	background-color: #f8e8d1d2;
+	background: #FEEBB0;
+	background: -webkit-linear-gradient(to right, #FEEBB0, #4B3C0E, #FEEBB0);
+	background: linear-gradient(to right, #4B3C0E, #FEEBB0, #4B3C0E);
 }
 .abt-col h2{
 	font-size:20px;
@@ -4037,7 +4043,9 @@ ul.social_icons.four li a:hover{
 	padding:0;
 	position: relative;
 	margin-top:60px;
-	background-color: #f8e8d1d2;
+	background: #FEEBB0;
+	background: -webkit-linear-gradient(to right, #FEEBB0, #4B3C0E, #FEEBB0);
+	background: linear-gradient(to right, #4B3C0E, #FEEBB0, #4B3C0E);
 }
 .section40 .img_holder {
 	position: relative;
@@ -4094,6 +4102,7 @@ ul.social_icons.four li a:hover{
 .section40 .member_info {
 	width:100%;
 	text-align: center;
+	color:#FFF;
 	padding: 15px 0 15px 0;
 	margin: 0px auto 0 auto;
 	border: 1px solid #cccccc;
@@ -4651,6 +4660,7 @@ a.knowmore_but:hover {
 .categories_holder ul.list {
 	width: 100%;
 	padding: 0;
+	color:#FFF;
 	float: left;
 	margin: 0px;
 }

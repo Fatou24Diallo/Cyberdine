@@ -1,278 +1,449 @@
-<!doctype html>
-<!--[if lt IE 7 ]> <html lang="en" class="no-js ie6"> <![endif]-->
-<!--[if IE 7 ]>    <html lang="en" class="no-js ie7"> <![endif]-->
-<!--[if IE 8 ]>    <html lang="en" class="no-js ie8"> <![endif]-->
-<!--[if IE 9 ]>    <html lang="en" class="no-js ie9"> <![endif]-->
-<!--[if (gt IE 9)|!(IE)]><!-->
-<html lang="en" class="no-js">
-<!--<![endif]-->
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, maximum-scale=1, initial-scale=1, user-scalable=0">
-<meta name="keywords" content="">
-<meta name="description" content="">
-<title>Cyberdine Messagerie</title>
+    <meta charset="utf-8">
+    <!-- This file has been downloaded from Bootsnipp.com. Enjoy! -->
+    <title>Cyberdine messagerie</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="http://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet">
+    <style type="text/css">
+        	body,html{
+			height: 100%;
+			margin: 0;
+			background: #FEEBB0;
+	       	background: -webkit-linear-gradient(to right, #FEEBB0, #4B3C0E, #FEEBB0);
+	        background: linear-gradient(to right, #4B3C0E, #FEEBB0, #4B3C0E);
+		}
 
-<!-- Favicon -->
-<link rel="shortcut icon" href="build/images/faviconC.ico">
-
-<!-- Google fonts - witch you want to use - (rest you can just remove) -->
-<link href='http://fonts.googleapis.com/css?family=Raleway:400,500,600,700,800,900,300,200,100' rel='stylesheet' type='text/css'>
-<link href='http://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
-
-<!--[if lt IE 9]>
-<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-<![endif]-->
-
-<!--  CSS STYLES  -->
-<link rel="stylesheet" href="build/css/reset.css" type="text/css" />
-<link rel="stylesheet" href="build/css/style.css" type="text/css" />
-<link rel="stylesheet" href="build/css/font-awesome/css/font-awesome.min.css">
-
-<!-- responsive devices styles -->
-<link rel="stylesheet" media="screen" href="build/css/responsive-leyouts.css" type="text/css" />
-
-<!-- mega menu -->
-<link href="build/js/mainmenu/sticky.css" rel="stylesheet">
-<link href="build/js/mainmenu/bootstrap.min.css" rel="stylesheet">
-<link href="build/js/mainmenu/demo.css" rel="stylesheet">
-<link href="build/js/mainmenu/menu.css" rel="stylesheet">
-
-<!-- revolution slider -->
-<link rel="stylesheet" type="text/css" href="build/js/revolutionslider/css/style.css" media="screen" />
-
-<!-- SLIDER REVOLUTION 4.x CSS SETTINGS -->
-<link rel="stylesheet" type="text/css" href="build/js/revolutionslider/css/extralayers.css" media="screen" />
-<link rel="stylesheet" type="text/css" href="build/js/revolutionslider/rs-plugin/css/settings.css" media="screen" />
-
-<!-- animations -->
-<link href="build/js/animations/css/animations.min.css" rel="stylesheet" type="text/css" media="all" />
-
-<!-- tabs -->
-<link rel="stylesheet" type="text/css" href="build/js/tabs/assets/css/responsive-tabs.css">
-<link rel="stylesheet" type="text/css" href="build/js/tabs/assets/css/responsive-tabs7.css">
-
-<!-- owl carousel assets -->
-<link href="build/js/owl-carousel/owl.carousel.css" rel="stylesheet">
-<link href="build/js/owl-carousel/owl.theme.css" rel="stylesheet">
-
-<!-- accordion -->
-<link rel="stylesheet" href="build/js/accordion/smk-accordion.css" />
-
-<!-- progressbar -->
-<link rel="stylesheet" href="build/js/progressbar/ui.progress-bar.css">
-
-<!-- Remove the below comments to use your color option -->
-<!--<link rel="stylesheet" href="css/colors/red.css" />-->
-<!--<link rel="stylesheet" href="css/colors/orange.css" />-->
-<!--<link rel="stylesheet" href="css/colors/olive.css" />-->
-<!--<link rel="stylesheet" href="css/colors/green.css" />-->
-<!--<link rel="stylesheet" href="css/colors/pink.css" />-->
-<!--<link rel="stylesheet" href="css/colors/violet.css" />-->
-<!--<link rel="stylesheet" href="css/colors/sea.css" />-->
-<!--<link rel="stylesheet" href="css/colors/lightblue.css" />-->
-<!--<link rel="stylesheet" href="css/colors/lightgreen.css" />-->
-
-<!-- style switcher -->
-<link rel = "stylesheet" media = "screen" href = "build/js/style-switcher/color-switcher.css" />
-<!-- style switcher colors -->
-<link rel="alternate stylesheet" type="text/css" href="build/css/colors/red.css" title="red" />
-<link rel="alternate stylesheet" type="text/css" href="build/css/colors/orange.css" title="orange" />
-<link rel="alternate stylesheet" type="text/css" href="build/css/colors/olive.css" title="olive" />
-<link rel="alternate stylesheet" type="text/css" href="build/css/colors/green.css" title="green" />
-<link rel="alternate stylesheet" type="text/css" href="build/css/colors/pink.css" title="pink" />
-<link rel="alternate stylesheet" type="text/css" href="build/css/colors/violet.css" title="violet" />
-<link rel="alternate stylesheet" type="text/css" href="build/css/colors/sea.css" title="sea" />
-<link rel="alternate stylesheet" type="text/css" href="build/css/colors/lightblue.css" title="lightblue" />
-<link rel="alternate stylesheet" type="text/css" href="build/css/colors/lightgreen.css" title="lightgreen" />
+		.chat{
+			margin-top: auto;
+			margin-bottom: auto;
+		}
+		.card{
+			height: 500px;
+			border-radius: 15px !important;
+			background-color: rgba(0,0,0,0.4) !important;
+		}
+		.contacts_body{
+			padding:  0.75rem 0 !important;
+			overflow-y: auto;
+			white-space: nowrap;
+		}
+		.msg_card_body{
+			overflow-y: auto;
+		}
+		.card-header{
+			border-radius: 15px 15px 0 0 !important;
+			border-bottom: 0 !important;
+		}
+	 .card-footer{
+		border-radius: 0 0 15px 15px !important;
+			border-top: 0 !important;
+	}
+		.container{
+			align-content: center;
+		}
+		.search{
+			border-radius: 15px 0 0 15px !important;
+			background-color: rgba(0,0,0,0.3) !important;
+			border:0 !important;
+			color:white !important;
+		}
+		.search:focus{
+		     box-shadow:none !important;
+           outline:0px !important;
+		}
+		.type_msg{
+			background-color: rgba(0,0,0,0.3) !important;
+			border:0 !important;
+			color:white !important;
+			height: 60px !important;
+			overflow-y: auto;
+		}
+			.type_msg:focus{
+		     box-shadow:none !important;
+           outline:0px !important;
+		}
+		.attach_btn{
+	border-radius: 15px 0 0 15px !important;
+	background-color: rgba(0,0,0,0.3) !important;
+			border:0 !important;
+			color: white !important;
+			cursor: pointer;
+		}
+		.send_btn{
+	border-radius: 0 15px 15px 0 !important;
+	background-color: rgba(0,0,0,0.3) !important;
+			border:0 !important;
+			color: white !important;
+			cursor: pointer;
+		}
+		.search_btn{
+			border-radius: 0 15px 15px 0 !important;
+			background-color: rgba(0,0,0,0.3) !important;
+			border:0 !important;
+			color: white !important;
+			cursor: pointer;
+		}
+		.contacts{
+			list-style: none;
+			padding: 0;
+		}
+		.contacts li{
+			width: 100% !important;
+			padding: 5px 10px;
+			margin-bottom: 15px !important;
+		}
+	.active{
+			background-color: rgba(0,0,0,0.3);
+	}
+		.user_img{
+			height: 70px;
+			width: 70px;
+			border:1.5px solid #f5f6fa;
+		
+		}
+		.user_img_msg{
+			height: 40px;
+			width: 40px;
+			border:1.5px solid #f5f6fa;
+		
+		}
+	.img_cont{
+			position: relative;
+			height: 70px;
+			width: 70px;
+	}
+	.img_cont_msg{
+			height: 40px;
+			width: 40px;
+	}
+	.online_icon{
+		position: absolute;
+		height: 15px;
+		width:15px;
+		background-color: #4cd137;
+		border-radius: 50%;
+		bottom: 0.2em;
+		right: 0.4em;
+		border:1.5px solid white;
+	}
+	.offline{
+		background-color: #c23616 !important;
+	}
+	.user_info{
+		margin-top: auto;
+		margin-bottom: auto;
+		margin-left: 15px;
+	}
+	.user_info span{
+		font-size: 20px;
+		color: white;
+	}
+	.user_info p{
+	font-size: 10px;
+	color: rgba(255,255,255,0.6);
+	}
+	.video_cam{
+		margin-left: 50px;
+		margin-top: 5px;
+	}
+	.video_cam span{
+		color: white;
+		font-size: 20px;
+		cursor: pointer;
+		margin-right: 20px;
+	}
+	.msg_cotainer{
+		margin-top: auto;
+		margin-bottom: auto;
+		margin-left: 10px;
+		border-radius: 25px;
+		background-color: #82ccdd;
+		padding: 10px;
+		position: relative;
+	}
+	.msg_cotainer_send{
+		margin-top: auto;
+		margin-bottom: auto;
+		margin-right: 10px;
+		border-radius: 25px;
+		background-color: #78e08f;
+		padding: 10px;
+		position: relative;
+	}
+	.msg_time{
+		position: absolute;
+		left: 0;
+		bottom: -15px;
+		color: rgba(255,255,255,0.5);
+		font-size: 10px;
+	}
+	.msg_time_send{
+		position: absolute;
+		right:0;
+		bottom: -15px;
+		color: rgba(255,255,255,0.5);
+		font-size: 10px;
+	}
+	.msg_head{
+		position: relative;
+	}
+	#action_menu_btn{
+		position: absolute;
+		right: 10px;
+		top: 10px;
+		color: white;
+		cursor: pointer;
+		font-size: 20px;
+	}
+	.action_menu{
+		z-index: 1;
+		position: absolute;
+		padding: 15px 0;
+		background-color: rgba(0,0,0,0.5);
+		color: white;
+		border-radius: 15px;
+		top: 30px;
+		right: 15px;
+		display: none;
+	}
+	.action_menu ul{
+		list-style: none;
+		padding: 0;
+	margin: 0;
+	}
+	.action_menu ul li{
+		width: 100%;
+		padding: 10px 15px;
+		margin-bottom: 5px;
+	}
+	.action_menu ul li i{
+		padding-right: 10px;
+	
+	}
+	.action_menu ul li:hover{
+		cursor: pointer;
+		background-color: rgba(0,0,0,0.2);
+	}
+	@media(max-width: 576px){
+	.contacts_card{
+		margin-bottom: 15px !important;
+	}
+	}
+    </style>
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
 </head>
-
 <body>
-<div class="preloader">
-  <div class="status"></div>
-</div>
-<!-- end page loader -->
-<div class="site_wrapper"> 
-  
-  <!-- header -->
-  <header> 
-    <!-- Top header bar -->
-    <div id="topHeader">
-      <div class="wrapper">
-        <div class="top_nav">
-          <div class="container">
-            <ul class="left">
-              <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-              <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-              <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-              <li class="last"><a href="#"><i class="fa fa-linkedin"></i></a></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- end top navigation -->
-    <div class="scrollto_sticky">
-      <div class="container"> 
-        
-        <!-- Logo -->
-        <div class="logo"><a href="#" id="logo"></a></div>
-        <!-- end menu --> 
-      </div>
-    </div>
-  </header>
-  <div class="clearfix"></div>
-  <!-- end page header -->
-  <div class="clearfix"></div>
-  <section> <h2 class="title4"><p>Messagerie</p></h2></section>
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Cyberdine messagerie</title>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <link rel="stylesheet" href="build/css/style.css" type="text/css" />
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.js"></script>
+	</head>
+	<!--Coded With Love By Mutiullah Samim-->
+	<body>
+   <div class="clearfix"></div>
+      <section> <h1 class="title4"><p>Messagerie de {{user_name}}</p></h1></section>
+		<div class="container-fluid h-100">
+			<div class="row justify-content-center h-100">
+				<div class="col-md-4 col-xl-3 chat"><div class="card mb-sm-3 mb-md-0 contacts_card">
+					<div class="card-header">
+						<div class="input-group">
+							<input type="text" placeholder="Search..." name="" class="form-control search">
+							<div class="input-group-prepend">
+								<span class="input-group-text search_btn"><i class="fas fa-search"></i></span>
+							</div>
+						</div>
+					</div>
+					<div class="card-body contacts_body">
+						<ui class="contacts">
+						<li class="active">
+							<div class="d-flex bd-highlight">
+								<div class="img_cont">
+									<img src="build/images/femme.png" class="rounded-circle user_img">
+									<span class="online_icon"></span>
+								</div>
+								<div class="user_info">
+									<span>Khalid</span>
+									<p>Kalid is online</p>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="d-flex bd-highlight">
+								<div class="img_cont">
+									<img src="build/images/femme.png" class="rounded-circle user_img">
+									<span class="online_icon offline"></span>
+								</div>
+								<div class="user_info">
+									<span>Taherah Big</span>
+									<p>Taherah left 7 mins ago</p>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="d-flex bd-highlight">
+								<div class="img_cont">
+									<img src="build/images/femme.png" class="rounded-circle user_img">
+									<span class="online_icon"></span>
+								</div>
+								<div class="user_info">
+									<span>Sami Rafi</span>
+									<p>Sami is online</p>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="d-flex bd-highlight">
+								<div class="img_cont">
+									<img src="build/images/femme.png" class="rounded-circle user_img">
+									<span class="online_icon offline"></span>
+								</div>
+								<div class="user_info">
+									<span>Nargis Hawa</span>
+									<p>Nargis left 30 mins ago</p>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="d-flex bd-highlight">
+								<div class="img_cont">
+									<img src="build/images/femme.png" class="rounded-circle user_img">
+									<span class="online_icon offline"></span>
+								</div>
+								<div class="user_info">
+									<span>Rashid Samim</span>
+									<p>Rashid left 50 mins ago</p>
+								</div>
+							</div>
+						</li>
+						</ui>
+					</div>
+					<div class="card-footer"></div>
+				</div></div>
+				<div class="col-md-8 col-xl-6 chat">
+					<div class="card">
+						<div class="card-header msg_head">
+							<div class="d-flex bd-highlight">
+								<div class="img_cont">
+									<img src="build/images/femme.png" class="rounded-circle user_img">
+									<span class="online_icon"></span>
+								</div>
+								<div class="user_info">
+									<span>Chat with Khalid</span>
+									<p>1767 Messages</p>
+								</div>
+								<div class="video_cam">
+									<span><i class="fas fa-video"></i></span>
+									<span><i class="fas fa-phone"></i></span>
+								</div>
+							</div>
+							<span id="action_menu_btn"><i class="fas fa-ellipsis-v"></i></span>
+							<div class="action_menu">
+								<ul>
+									<li><i class="fas fa-user-circle"></i> View profile</li>
+									<li><i class="fas fa-users"></i> Add to close friends</li>
+									<li><i class="fas fa-plus"></i> Add to group</li>
+									<li><i class="fas fa-ban"></i> Block</li>
+								</ul>
+							</div>
+						</div>
+						<div class="card-body msg_card_body">
+							<div class="d-flex justify-content-start mb-4">
+								<div class="img_cont_msg">
+									<img src="build/images/femme.png" class="rounded-circle user_img_msg">
+								</div>
+								<div class="msg_cotainer">
+									Hi, how are you samim?
+									<span class="msg_time">8:40 AM, Today</span>
+								</div>
+							</div>
+							<div class="d-flex justify-content-end mb-4">
+								<div class="msg_cotainer_send">
+									Hi Khalid i am good tnx how about you?
+									<span class="msg_time_send">8:55 AM, Today</span>
+								</div>
+								<div class="img_cont_msg">
+							<img src="build/images/femme.png" class="rounded-circle user_img_msg">
+								</div>
+							</div>
+							<div class="d-flex justify-content-start mb-4">
+								<div class="img_cont_msg">
+									<img src="build/images/femme.png" class="rounded-circle user_img_msg">
+								</div>
+								<div class="msg_cotainer">
+									I am good too, thank you for your chat template
+									<span class="msg_time">9:00 AM, Today</span>
+								</div>
+							</div>
+							<div class="d-flex justify-content-end mb-4">
+								<div class="msg_cotainer_send">
+									You are welcome
+									<span class="msg_time_send">9:05 AM, Today</span>
+								</div>
+								<div class="img_cont_msg">
+							<img src="build/images/femme.png" class="rounded-circle user_img_msg">
+								</div>
+							</div>
+							<div class="d-flex justify-content-start mb-4">
+								<div class="img_cont_msg">
+									<img src="build/images/femme.png" class="rounded-circle user_img_msg">
+								</div>
+								<div class="msg_cotainer">
+									I am looking for your next templates
+									<span class="msg_time">9:07 AM, Today</span>
+								</div>
+							</div>
+							<div class="d-flex justify-content-end mb-4">
+								<div class="msg_cotainer_send">
+									Ok, thank you have a good day
+									<span class="msg_time_send">9:10 AM, Today</span>
+								</div>
+								<div class="img_cont_msg">
+						<img src="build/images/femme.png" class="rounded-circle user_img_msg">
+								</div>
+							</div>
+							<div class="d-flex justify-content-start mb-4">
+								<div class="img_cont_msg">
+									<img src="build/images/femme.png" class="rounded-circle user_img_msg">
+								</div>
+								<div class="msg_cotainer">
+									Bye, see you
+									<span class="msg_time">9:12 AM, Today</span>
+								</div>
+							</div>
+						</div>
+						<div class="card-footer">
+							<div class="input-group">
+								<div class="input-group-append">
+									<span class="input-group-text attach_btn"><i class="fas fa-paperclip"></i></span>
+								</div>
+								<textarea name="" class="form-control type_msg" placeholder="Type your message..."></textarea>
+								<div class="input-group-append">
+									<span class="input-group-text send_btn"><i class="fas fa-location-arrow"></i></span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
 
-
-  <div class="clearfix"></div>
-  <section class="common_section">
-    <div class="container">
-      <form method="post" action="">
-      <div class="left_sidebar">
-        <div class="categories_holder">
-          <h1 class="padd_bot2 title5">Choisir un destinataire </h1>
-          <h5><ul class="list">
-            <li class="first title6">
-              <select name="users">
-                {% for user in users %}
-                  <option value="user_name">{{user.username}}</option>
-                {% endfor %}
-              </select>
-            </li>
-            
-            <li class="last"></li>
-          </ul></h5>
-        </div>
-        <!--end categories-->
-        <div class="clearfix"></div>
-
-      </div>
-      <!--end left sidebar-->
-      
-    <div class="content_right">
-      <label for="message" class="title6">Message:</label><br><br>
-
-      <textarea id="message" name="message"
-                rows="5" cols="33">
-      </textarea>
-
-      <button class="btn btn-success">Envoyer</button>
-
-    </div></form>
-    <!--end content right--> 
-      
-    </div>
-  </section>
-  <!-- end section 1 -->
-  <div class="clearfix"></div>
-
-
-<div class="clearfix"></div>
-
-    <!--<footer>
-        <div class="copyrights">
-            <div class="container">
-                <div class="one_half"><span>Copyright Cyberdine 2020 . All rights reserved.</span></div>
-            </div>
-        </div>
-        end copyrights 
-    </footer>-->
-</div>
-<!--end sitewraper--> 
-
-<!-- style switcher --> 
-<script type="text/javascript" src="js/style-switcher/styleswitcher.js"></script>
-<!-- end style switcher --> 
-
-<a href="#" class="scrollup"></a> 
-<!-- end scroll to top of the page--> 
-
-<!-- ######### JS FILES ######### --> 
-
-<!-- get jQuery from the google apis --> 
-<script type="text/javascript" src="build/js/universal/jquery.js"></script> 
-
-<!-- page loder --> 
-<script>
-// makes sure the whole site is loaded
-
-(function($) {
-  "use strict";
-jQuery(window).load(function() {
-	"use strict";
-        // will first fade out the loading animation
-	jQuery(".status").fadeOut();
-        // will fade out the whole DIV that covers the website.
-	jQuery(".preloader").delay(1000).fadeOut("slow");
-})
-
-})(jQuery);
-</script> 
-<!-- style switcher --> 
-
-<script src="build/js/style-switcher/jquery-1.js"></script> 
-<script src="js/style-switcher/styleselector.js"></script> 
-
-<!-- animations --> 
-<script src="build/js/animations/animations.min.js" type="text/javascript"></script> 
-<script src="build/js/animations/appear.min.js" type="text/javascript"></script> 
-
-<!-- scroll to fixied sticky --> 
-<script src="build/js/mainmenu/jquery-scrolltofixed.js" type="text/javascript"></script> 
-<script src="build/js/mainmenu/ScrollToFixed_custom.js" type="text/javascript"></script> 
-
-<!-- SLIDER REVOLUTION 4.x SCRIPTS  --> 
-<script type="text/javascript" src="build/js/revolutionslider/rs-plugin/js/jquery.themepunch.revolution.js"></script> 
-<script type="text/javascript" src="build/js/revolutionslider/rs-plugin/js/jquery.themepunch.tools.min.js"></script> 
-<script type="text/javascript" src="build/js/revolutionslider/rs-plugin/js/jquery.themepunch.revolution.min.js"></script> 
-<script type="text/javascript" src="build/js/revolutionslider/custom1.js"></script> 
-
-<!-- mega menu --> 
-<script src="build/js/mainmenu/bootstrap.min.js"></script> 
-<script src="build/js/mainmenu/customeUI.js"></script> 
-
-<!-- tabs --> 
-<script src="build/js/tabs/assets/js/responsive-tabs.min.js" type="text/javascript"></script> 
-
-<!-- Accordion --> 
-<script type="text/javascript" src="build/js/accordion/smk-accordion.js"></script> 
-<script type="text/javascript" src="build/js/accordion/custom.js"></script> 
-
-<!-- owl-carousel --> 
-<script src="build/js/owl-carousel/owl.carousel.js"></script> 
-<script>
-(function($) {
-  "use strict";
-  
-    $(document).ready(function() {
-      $("#owl-demo").owlCarousel({
-
-      navigation : true,
-      slideSpeed : 300,
-      paginationSpeed : 400,
-      singleItem : true
-
-      // "singleItem:true" is a shortcut for:
-      // items : 1, 
-      // itemsDesktop : false,
-      // itemsDesktopSmall : false,
-      // itemsTablet: false,
-      // itemsMobile : false
-
-      });
-    });
-	})(jQuery);
-</script> 
-
-<!-- scroll up --> 
-<script src="build/js/scrolltotop/totop.js" type="text/javascript"></script>
-
-<!-- progress bar --> 
-<script src="build/js/progressbar/progress.js" type="text/javascript" charset="utf-8"></script>
-
+<script type="text/javascript">
+	$(document).ready(function(){
+$('#action_menu_btn').click(function(){
+	$('.action_menu').toggle();
+});
+	});
+</script>
 </body>
 </html>
