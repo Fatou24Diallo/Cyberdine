@@ -836,6 +836,17 @@ ul.social_icons.four li a:hover{
     text-transform: none;
     width: 80%;
 }
+.title4 .textClient {
+    color: #020202;
+    display: block;
+    font-style: normal;
+    font-weight: normal;
+	font-family:Open Sans, sans-serif;
+    line-height: 20px;
+    margin:60px auto 0;
+    text-transform: none;
+    width: 80%;
+}
 .title4 .line {
     background:url(../images/title-line-blue.png) no-repeat center bottom;
     display: block;
