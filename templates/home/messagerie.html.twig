@@ -114,10 +114,12 @@
 			position: relative;
 			height: 70px;
 			width: 70px;
+			background-color: black;
 	}
 	.img_cont_msg{
 			height: 40px;
 			width: 40px;
+			background: black;
 	}
 	.online_icon{
 		position: absolute;
@@ -269,8 +271,8 @@
 								<a href="{{path('getMessages', {'id':conversation.conversationId})}}">
 									<li class="active">
 										<div class="d-flex bd-highlight">
-											<div class="img_cont">
-												<img src="build/images/femme.png" class="rounded-circle user_img">
+											<div class="img_cont rounded-circle user_img">
+												
 												<span class="online_icon"></span>
 											</div>
 											<div class="user_info">
@@ -289,13 +291,15 @@
 					<div class="card">
 						<div class="card-header msg_head">
 							<div class="d-flex bd-highlight">
-								<div class="img_cont">
-									<img src="build/images/femme.png" class="rounded-circle user_img">
+								<div class="img_cont rounded-circle user_img">
 									<span class="online_icon"></span>
 								</div>
 								<div class="user_info">
-									<span>Chat with Khalid</span>
-									<p>1767 Messages</p>
+									{% if other %}
+										<span>Chat with {{ other }}</span>
+									{% else %}
+										<span>Chat</span>
+									{% endif %}
 								</div>
 								<div class="video_cam">
 									<span><i class="fas fa-video"></i></span>
@@ -316,8 +320,7 @@
 						{% if messages %}
 							{% for message in messages %}
 								<div  {% if message.mine == true %}class="d-flex justify-content-end mb-4" {% else %} class="d-flex justify-content-start mb-4" {% endif %}>
-									<div class="img_cont_msg">
-										<img src="build/images/femme.png" class="rounded-circle user_img_msg">
+									<div class="img_cont_msg rounded-circle user_img_msg">
 									</div>
 									<div class="msg_cotainer">
 										{{ message.content }}
@@ -336,7 +339,7 @@
 								</div>
 								<textarea name="content" class="form-control type_msg" placeholder="Type your message..."></textarea>
 								<div class="input-group-append">
-									<a href="{{path('newMessage')}}">
+									<a href="#">
 										<span class="input-group-text send_btn"><i class="fas fa-location-arrow"></i></span>
 									</a>
 								</div>

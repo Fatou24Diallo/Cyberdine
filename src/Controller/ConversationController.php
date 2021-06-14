@@ -145,6 +145,7 @@ class ConversationController extends AbstractController
             'user_name' => $userName,
             'user_email' => $userEmail,
             'messages' => null,
+            'other' => null,
         ]);
     }
 
@@ -177,6 +178,8 @@ class ConversationController extends AbstractController
         $user = $this->getUser();
         $userName = $user->getUsername();
         $userEmail = $user->getEmail();
+        $other = $this->participantRepository->findParticipantByConverstionIdAndUserId($id, $this->getUser()->getId());
+        $other = $other->getUser()->getUsername();
         return $this->render('home/messagerie.html.twig', [
             'controller_name' => 'ConversationController',
             'conversations' => $conversations,
@@ -184,6 +187,7 @@ class ConversationController extends AbstractController
             'user_name' => $userName,
             'user_email' => $userEmail,
             'messages' => $messages,
+            'other' => $other,
         ]);
     }
 
